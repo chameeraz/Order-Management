@@ -12,7 +12,7 @@ export default function ProductManagement() {
   });
 
   async function load() {
-    const res = await fetch('http://localhost:4000/api/products');
+    const res = await fetch('https://order-management-backend-beta.vercel.app/api/products');
     const data = await res.json();
     setProducts(data);
   }
@@ -24,7 +24,7 @@ export default function ProductManagement() {
   }
 
   async function saveProduct() {
-    await fetch('http://localhost:4000/api/products', {
+    await fetch('https://order-management-backend-beta.vercel.app/api/products', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
@@ -36,7 +36,7 @@ export default function ProductManagement() {
   }
 
   async function deleteProduct(id) {
-    await fetch(`http://localhost:4000/api/products/${id}`, { method: 'DELETE' });
+    await fetch(`https://order-management-backend-beta.vercel.app/api/products/${id}`, { method: 'DELETE' });
     await load();
   }
 

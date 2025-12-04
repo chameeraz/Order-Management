@@ -1,4 +1,4 @@
-const BASE = process.env.REACT_APP_API_URL || 'http://localhost:4000/api/order';
+const BASE = process.env.REACT_APP_API_URL || 'https://order-management-backend-beta.vercel.app/api/order';
 
 export async function fetchOrders() {
   const res = await fetch(BASE);
@@ -35,7 +35,7 @@ export async function deleteOrder(id) {
 }
 
 export async function fetchProducts() {
-  const res = await fetch('http://localhost:4000/api/products');
+  const res = await fetch('https://order-management-backend-beta.vercel.app/api/products');
   return res.json();
 }
 
