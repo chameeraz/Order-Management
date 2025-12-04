@@ -20,7 +20,7 @@
    npm run dev
    Server runs on http://localhost:4000
 
-APIs:
+APIs (Order):
 - GET  /api/order         get all Orders
 - GET  /api/order/:id     get Order by id
 - POST /api/order         add new Order
