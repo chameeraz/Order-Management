@@ -1,9 +1,11 @@
 const { Pool } = require('pg');
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false // Required for most Vercel/Neon connections
+  }
 });
 
 module.exports = {
