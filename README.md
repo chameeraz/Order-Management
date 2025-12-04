@@ -38,7 +38,7 @@ APIs (Order):
 2. install:
    npm install
 3. start:
-   npm start
+   npm run start
    Frontend runs on http://localhost:3000 and talks to backend at http://localhost:4000
 
 ## Notes and assumptions
