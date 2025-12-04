@@ -13,7 +13,7 @@ app.use(express.json());
 app.use('/api/order', ordersRouter);
 app.use('/api/products', productsRouter);
 
-app.get('/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/', (req, res) => res.json({ status: 'Backend is OK' }));
 
 // --- CHANGE IS HERE ---
 // Only listen when running locally.
